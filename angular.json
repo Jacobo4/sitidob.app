@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "sitidob": {
@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "sitidob"
+    }
+  },
+  "defaultProject": "sitidob",
+  "cli": {
+    "analytics": "98aa6aeb-3188-4fef-bc42-8c39aa41c994"
+  }
 }
