@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router }            from '@angular/router';
+
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  clicked: boolean = false;
 
-  ngOnInit(): void {
+
+  options = [
+    {
+      name: 'home'
+    },
+    {
+      name: 'Teachers'
+    },
+    {
+      name: 'Students'
+    }
+  ]
+  constructor(private router: Router) {
   }
 
+
+  ngOnInit(): void {
+
+
+  }
+
+
+  handleClick() {
+    this.clicked = this.clicked === true ? false : true;
+  }
 }

@@ -1,1 +1,23 @@
-<app-home></app-home>
+<nav>
+  <ul>
+
+    <li>
+      <a [routerLink]="['/home']" [routerLinkActive]="['active']">
+        <fa-icon [icon]="iconHome"></fa-icon>
+        <span>Home</span>
+      </a>
+    </li>
+
+    <li>
+      <a [routerLink]="['/grades/teachers']" [routerLinkActive]="['active']">
+        <fa-icon [icon]="iconGrades"></fa-icon>
+        <span>Grades</span>
+      </a>
+    </li>
+
+  </ul>
+</nav>
+
+<main>
+  <router-outlet></router-outlet>
+</main>

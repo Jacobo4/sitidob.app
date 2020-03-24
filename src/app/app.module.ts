@@ -1,16 +1,36 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+/*=============
+Routing
+===============*/
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 
 
-// 1. Import the libs you need
+/*=============
+Modules
+===============*/
+import { HomeModule } from './home/home.module';
+
+/*=============
+Firebase
+===============*/
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
-import { HomeComponent } from './home/home.component';
+
+/*=============
+Font awesomw for icons
+===============*/
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
+/*=============
+Components
+===============*/
+import { AppComponent } from './app.component';
+
+
 
 
 const firebaseConfig = {
@@ -29,16 +49,19 @@ const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
   ],
   imports: [
     BrowserModule,
+    
     AppRoutingModule,
-    // 3. Initialize
+    HomeModule,
+
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFirestoreModule, // firestore
     AngularFireAuthModule, // auth
-    AngularFireStorageModule // storage
+    AngularFireStorageModule,  // storage
+
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

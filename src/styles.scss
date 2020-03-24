@@ -1,2 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
-@import "assets/styles/base.scss";
+@import "assets/styles/theme.scss";
+
+body{
+  font-family: 'Roboto';
+  font-weight: normal;
+  font-size: 15px;
+  @include md(){
+    font-size: 18px;
+  }
+}
+
+ul{
+  padding: 0;
+}
+
+// NOTE: Esto es temporal mientras consigo ponerlo en otra parte
+app-root{
+  display: flex ;
+}
