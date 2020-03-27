@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { faHome, faSchool } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -8,9 +7,10 @@ import { faHome, faSchool } from '@fortawesome/free-solid-svg-icons';
 })
 
 export class AppComponent {
-  /*=============
-  Icons
-  ===============*/
-  iconHome = faHome;
-  iconGrades = faSchool;
+  public isLlogged : boolean = true;
+
+  constructor() {
+
+  }
+
 }

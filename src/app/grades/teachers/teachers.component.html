@@ -1,1 +1,7 @@
-<p>teachers works!</p>
+<h1>List of students</h1>
+<button type="button" name="button"(click)="onClick()"></button>
+<ul *ngIf="clicked">
+  <li class="text" *ngFor="let student of students | async">
+    {{student.name}}
+  </li>
+</ul>

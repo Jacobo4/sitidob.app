@@ -1,17 +1,21 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { LoginComponent } from "./auth/login/login.component";
-import { HomeComponent } from "./home/home.component";
-import { TeachersComponent } from "./grades/teachers/teachers.component";
-// import { PageNotFoundComponent }    from './page-not-found/page-not-found.component';
+import { LoginComponent } from "./login/login.component";
 
+// import { PageNotFoundComponent }    from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
   // { path: '',  redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home',   component: HomeComponent},
-  { path: 'grades/teachers',   component: TeachersComponent},
   { path: '',   component: LoginComponent},
+  {
+    path: 'home',
+    loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
+  },
+  {
+    path: 'grades',
+    loadChildren: () => import('./grades/grades.module').then(m => m.GradesModule)
+  },
 
   // { path: 'grades/teachers', component: grades/teachers/TeachersComponent },
   // { path: 'hero/:id',      component: HeroDetailComponent },

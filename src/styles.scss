@@ -11,9 +11,9 @@ body{
 
 ul{
   padding: 0;
+  margin: 0;
 }
 
-// NOTE: Esto es temporal mientras consigo ponerlo en otra parte
-app-root{
+.app-shell{
   display: flex ;
 }
