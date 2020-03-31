@@ -1,15 +1,17 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 
 export class AppComponent {
-  public isLlogged : boolean = true;
+  public isLlogged : boolean = false;
 
   constructor() {
+
 
   }
 

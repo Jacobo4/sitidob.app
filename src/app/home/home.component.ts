@@ -12,6 +12,7 @@ export class HomeComponent implements OnInit {
   clicked: boolean = false;
 
 
+
   options = [
     {
       name: 'home'
@@ -28,6 +29,7 @@ export class HomeComponent implements OnInit {
 
 
   ngOnInit(): void {
+    console.log('jacobo');
 
 
   }

@@ -1,0 +1,32 @@
+@import "../../../assets/styles/utilities/all.scss"; // NOTE: Importing variables and mixinx
+
+nav {
+  background: $primary-dark;
+  height: 100vh;
+  min-width: 60px;
+
+  ul {
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5px 0;
+      color: white;
+      text-decoration: none;
+      &:nth-child(1) {
+        fa-icon {
+          font-size: 36px;
+        }
+      }
+
+      fa-icon {
+        font-size: 30px;
+      }
+
+    }
+  }
+}
+
+main {
+  width: 100%;
+}

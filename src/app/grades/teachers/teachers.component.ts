@@ -1,59 +1,53 @@
 import { Component, OnInit } from '@angular/core';
 import { Router }            from '@angular/router';
+import { StudentsService }   from '../../services/students.service';
 
-
-
-/*===========
-Firebase
-============*/
-import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
-import 'firebase/firestore';
+import { map, tap } from 'rxjs/operators';
 
 
 @Component({
   selector: 'grades-teachers',
   templateUrl: './teachers.component.html',
-  styleUrls: ['./teachers.component.scss']
+  styleUrls: ['./teachers.component.scss'],
+
 })
 export class TeachersComponent implements OnInit {
-
-  students: Observable<any[]>;
-
+  students$: Observable<any[]>;
+  students:any;
   clicked = false;
 
-  constructor(private router: Router, firestore: AngularFirestore) {
+  constructor(private router: Router, private studentsService: StudentsService) {
+    /*
+    NOTE: El metodo subscribe es de los observables. Lo que hace es que se "subscribe"
+    al observable que está retornando getStudents(), es decir, esta "observando" cambios en el observador(getStudents());
+    */
+    this.students$ = this.studentsService.getStudents().pipe(
+      // NOTE: El primer map es de rxjs, el segundo map es el de Array.prototype.map()
+      map(data => data.map((student) => student.lastname)),
+      tap(data => console.log('proebas', data)),
+    );
 
-    this.students = firestore.collection('students').valueChanges();
-
-    console.log('la vuelta rara', this.students)
-    this.students.forEach(element => {
-
-      // let student = {
-      //   name: element.map((x)=>x.name),
-      //   lastname: element.map((x)=>x.lastname),
-      //   age: element.map((x)=>x.age),
-      // };
-      //
-      // let jacobo = element.map((x)=> x.name);
-
-      console.log('estudiantes',element);
-      // console.log(jacobo);
-
+    this.students$.subscribe({
+      next: (e) => this.students = e,
+      error: (error) => console.log('Error en observable', error),
+      complete: () => console.log('complete')
     });
-
-
-
 
   }
 
-
-
   ngOnInit(): void {
+    // async function pruebas() {
+    //   await this.students
+    //   console.log(this.students)
+    // }
+
+    // setTimeout(()=> console.log(this.students),2000)
+
   }
 
   onClick(): void {
-    this.clicked = true;
+
   }
 
 }

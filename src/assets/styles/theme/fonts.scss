@@ -1,95 +1,79 @@
 @font-face {
-    font-family: 'Roboto';
-    src: url('assets/fonts/Roboto-Black.woff2') format('woff2'),
-        url('assets/fonts/Roboto-Black.woff') format('woff');
-    font-weight: 900;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('assets/fonts/Roboto-Bold.woff2') format('woff2'),
-        url('assets/fonts/Roboto-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('assets/fonts/Roboto-Italic.woff2') format('woff2'),
-        url('assets/fonts/Roboto-Italic.woff') format('woff');
-    font-weight: normal;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('assets/fonts/Roboto-MediumItalic.woff2') format('woff2'),
-        url('assets/fonts/Roboto-MediumItalic.woff') format('woff');
-    font-weight: 500;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('assets/fonts/Roboto-BoldItalic.woff2') format('woff2'),
-        url('assets/fonts/Roboto-BoldItalic.woff') format('woff');
-    font-weight: bold;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('assets/fonts/Roboto-LightItalic.woff2') format('woff2'),
-        url('assets/fonts/Roboto-LightItalic.woff') format('woff');
-    font-weight: 300;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('assets/fonts/Roboto-ThinItalic.woff2') format('woff2'),
-        url('assets/fonts/Roboto-ThinItalic.woff') format('woff');
-    font-weight: 100;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('assets/fonts/Roboto-Regular.woff2') format('woff2'),
-        url('assets/fonts/Roboto-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('assets/fonts/Roboto-Medium.woff2') format('woff2'),
-        url('assets/fonts/Roboto-Medium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('assets/fonts/Roboto-BlackItalic.woff2') format('woff2'),
-        url('assets/fonts/Roboto-BlackItalic.woff') format('woff');
-    font-weight: 900;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('assets/fonts/Roboto-Light.woff2') format('woff2'),
-        url('assets/fonts/Roboto-Light.woff') format('woff');
+    font-family: 'Rubik';
+    src: url('assets/fonts/Rubik-Light.woff2') format('woff2'),
+        url('assets/fonts/Rubik-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Roboto';
-    src: url('assets/fonts/Roboto-Thin.woff2') format('woff2'),
-        url('assets/fonts/Roboto-Thin.woff') format('woff');
-    font-weight: 100;
+    font-family: 'Rubik';
+    src: url('assets/fonts/Rubik-MediumItalic.woff2') format('woff2'),
+        url('assets/fonts/Rubik-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('assets/fonts/Rubik-Bold.woff2') format('woff2'),
+        url('assets/fonts/Rubik-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('assets/fonts/Rubik-Medium.woff2') format('woff2'),
+        url('assets/fonts/Rubik-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('assets/fonts/Rubik-LightItalic.woff2') format('woff2'),
+        url('assets/fonts/Rubik-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('assets/fonts/Rubik-BoldItalic.woff2') format('woff2'),
+        url('assets/fonts/Rubik-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('assets/fonts/Rubik-Italic.woff2') format('woff2'),
+        url('assets/fonts/Rubik-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('assets/fonts/Rubik-BlackItalic.woff2') format('woff2'),
+        url('assets/fonts/Rubik-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('assets/fonts/Rubik-Black.woff2') format('woff2'),
+        url('assets/fonts/Rubik-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('assets/fonts/Rubik-Regular.woff2') format('woff2'),
+        url('assets/fonts/Rubik-Regular.woff') format('woff');
+    font-weight: normal;
     font-style: normal;
 }
