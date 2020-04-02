@@ -2,6 +2,17 @@ import { Component, OnInit } from '@angular/core';
 import { faHome, faSchool } from '@fortawesome/free-solid-svg-icons';
 
 
+/*=============
+Routing
+===============*/
+import { Router }   from '@angular/router';
+
+
+/*=============
+Services
+===============*/
+import { AuthService } from '../../services/auth.service';
+
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -9,13 +20,16 @@ import { faHome, faSchool } from '@fortawesome/free-solid-svg-icons';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  //Icons
+  iconHome = faHome;
+  iconGrades = faSchool;
+
+  constructor(private rotuer: Router, private auth: AuthService) { }
 
   ngOnInit(): void {
   }
-  /*=============
-  Icons
-  ===============*/
-  iconHome = faHome;
-  iconGrades = faSchool;
+
+  salir(){
+    this.auth.logout();
+  }
 }

@@ -22,7 +22,8 @@ import { environment } from '../environments/environment';
 Services
 ===============*/
 
-import { StudentsService } from './services/students.service'
+import { StudentsService } from './services/students.service';
+import { AuthService } from './services/auth.service';
 
 /*=============
 Font awesomw for icons
@@ -30,20 +31,32 @@ Font awesomw for icons
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 /*=============
+Animations
+===============*/
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+/*=============
 Components
 ===============*/
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { LoginComponent } from './components/users/login/login.component';
+import { RegisterComponent } from './components/users/register/register.component';
+import { ProfileComponent } from './components/users/profile/profile.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
+    LoginComponent,
+    RegisterComponent,
+    ProfileComponent,
   ],
   imports: [
-    BrowserModule,
     CommonModule,
+    BrowserModule,
     AppRoutingModule,
 
     AngularFireModule.initializeApp(environment.firebaseConfig),
@@ -51,9 +64,12 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     AngularFireAuthModule, // auth
     AngularFireStorageModule,  // storage (to storage images,videos, etc)
 
-    FontAwesomeModule
+    FontAwesomeModule,
+
+    BrowserAnimationsModule
+
   ],
-  providers: [StudentsService],
+  providers: [StudentsService,AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

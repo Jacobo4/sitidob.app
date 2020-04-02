@@ -1,4 +1,3 @@
-
 <div id="login">
   <div class="wrapper login-wrapper">
     <h1>Login</h1>
@@ -16,12 +15,15 @@
       </div>
       <span>or</span>
       <div class="form-group">
-        <button type="button" name="button" (click)="loginWithGoogle()">Login with Google!</button>
+        <button class="btn-google" type="button" name="button" (click)="loginWithGoogle()">
+          <fa-icon [icon]="iconGoogle"></fa-icon>
+          Login with Google!
+        </button>
       </div>
 
 
-      <a href="#">I don't remember my password</a>
-      <a href="#">I don't have an account</a>
+      <!-- <a [routerLink]="['/']">I don't remember my password</a> -->
+      <a [routerLink]="['/register']">I don't have an account</a>
 
     </form>
   </div>

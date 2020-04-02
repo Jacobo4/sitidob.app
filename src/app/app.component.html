@@ -1,6 +1,6 @@
 <div class="app-shell">
-  <app-navbar *ngIf="isLlogged"></app-navbar>
-  <main>
-    <router-outlet></router-outlet>
+  <app-navbar *ngIf="isLogged"></app-navbar>
+  <main [@routeAnimations]="prepareRoute(outlet)">
+    <router-outlet #outlet="outlet"></router-outlet>
   </main>
 </div>

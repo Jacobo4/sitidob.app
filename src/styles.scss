@@ -16,6 +16,7 @@ html{
 body{
   background: $body-bg;
   color: $black;
+  overflow: hidden;
 }
 
 
@@ -47,7 +48,7 @@ p{
   font-size: 1rem;
 }
 
-[type="submit"]{
+button{
   cursor: pointer;
 }
 .input-form{

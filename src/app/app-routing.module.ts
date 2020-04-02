@@ -7,8 +7,8 @@ import { ProfileComponent }  from './components/users/profile/profile.component'
 import { RegisterComponent }  from './components/users/register/register.component'
 
 const routes: Routes = [
-  { path: '', component: LoginComponent },
-  { path: 'register', component: RegisterComponent },
+  { path: '', component: LoginComponent, data:{ animation: 'slideLeft' }},
+  { path: 'register', component: RegisterComponent, data:{ animation: 'slideRigth' }},
   { path: 'profile', component: ProfileComponent },
   {
     path: 'home',
