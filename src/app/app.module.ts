@@ -4,6 +4,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 /*=============
+Forms
+===============*/
+import { FormsModule }   from '@angular/forms';
+
+/*=============
 Routing
 ===============*/
 import { AppRoutingModule } from './app-routing.module';
@@ -58,6 +63,7 @@ import { ProfileComponent } from './components/users/profile/profile.component';
     CommonModule,
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
 
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule, // firestore (database)

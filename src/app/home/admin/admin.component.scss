@@ -1,13 +1,9 @@
-@import "../../../../assets/styles/utilities/all.scss"; // NOTE: Importing variables and mixinx
+@import "../../../assets/styles/utilities/all.scss"; // NOTE: Importing variables and mixinx
 
-#login {
+#home-admin {
   display: flex;
-  width: 100vw;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
 
-  .login-wrapper {
+  .newAdmin-wrapper {
     padding: 2rem;
     margin: 0 15px;
     width: 100%;

@@ -3,12 +3,6 @@ import { faHome, faSchool } from '@fortawesome/free-solid-svg-icons';
 
 
 /*=============
-Routing
-===============*/
-import { Router }   from '@angular/router';
-
-
-/*=============
 Services
 ===============*/
 import { AuthService } from '../../services/auth.service';
@@ -24,7 +18,7 @@ export class NavbarComponent implements OnInit {
   iconHome = faHome;
   iconGrades = faSchool;
 
-  constructor(private rotuer: Router, private auth: AuthService) { }
+  constructor(private auth: AuthService) { }
 
   ngOnInit(): void {
   }

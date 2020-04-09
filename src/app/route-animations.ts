@@ -16,13 +16,13 @@ export const slideRigth =
   ]);
 
 
-function slideTo(firstDirection:string, secondDirection:string){
-  if (firstDirection === 'rigth' && secondDirection === 'left'){
-    firstDirection = '100vw';
-    secondDirection = '-100vh';
-  }else if(firstDirection === 'left' && secondDirection === 'rigth'){
-    firstDirection = '-100vw';
-    secondDirection = '100vh';
+function slideTo(from:string, to:string){
+  if (from === 'rigth' && to === 'left'){
+    from = '100vw';
+    to = '-100vw';
+  }else if(from === 'left' && to === 'rigth'){
+    from = '-100vw';
+    to = '100vw';
   }
 
   return [
@@ -32,11 +32,11 @@ function slideTo(firstDirection:string, secondDirection:string){
       })
     ]),
     query(':enter', [
-      style({ transform : `translateX(${firstDirection})` })
+      style({ transform : `translateX(${from})` })
     ]),
     group([
       query(':leave', [
-        animate('500ms ease', style({ transform: `translateX(${secondDirection})` }))
+        animate('500ms ease', style({ transform: `translateX(${to})` }))
       ], {optional:true}),
       query(':enter', [
         animate('500ms ease', style({ transform: `translateX(0vw)` }))

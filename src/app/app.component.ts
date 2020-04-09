@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 
+
 /*=============
-Routing
+Router
 ===============*/
+import { Router }   from '@angular/router';
 import { RouterOutlet } from '@angular/router';
 import { slideRigth } from './route-animations'; //Animation
-import { Router }   from '@angular/router';
 
 
 /*=============
@@ -24,20 +25,24 @@ import { AuthService } from './services/auth.service';
 })
 
 export class AppComponent {
-  private isLogged: boolean = false;
+  public isLogged: boolean = false;
 
-  constructor(private router: Router, private authService: AuthService) {
-    this.authService.isAuth().subscribe( auth => {
+  constructor(private router:Router, private authService: AuthService) {
+
+    this.authService.isAuth().subscribe(
+      auth => {
       if (auth) {
         this.isLogged = true;
-        this.router.navigate(['home'])
+        this.router.navigate(['home']);
+        // console.log('loguea', auth);
+
       }else{
-        console.log('asd');
-        this.router.navigate([''])
+        // console.log('noLoguea');
+        this.router.navigate(['']);
         this.isLogged = false;
       }
-      // auth == true ? console.log('esta') : console.log('no esta');
-    })
+    });
+
   }
 
   prepareRoute(outlet: RouterOutlet) {

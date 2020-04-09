@@ -1,21 +1,21 @@
 <div id="login">
   <div class="wrapper login-wrapper">
     <h1>Login</h1>
-    <form class="login-form" action="index.html" method="post">
+    <form class="login-form" #formLogin="ngForm" (submit)="onLoginWithUser()" >
       <div class="form-group">
-        <input class="input-form" type="text" name="username" value="" required>
-        <label for="">Username</label>
+        <input class="input-form input-primary" type="text" name="user" [(ngModel)]="user.email" required>
+        <label class="label-primary">Email</label>
       </div>
       <div class="form-group">
-        <input class="input-form" type="password" name="username" value="" required>
-        <label for="">Password</label>
+        <input class="input-form input-primary" type="password" name="password" [(ngModel)]="user.password" required>
+        <label class="label-primary">Password</label>
       </div>
       <div class="form-group">
         <button type="submit" name="button">Go!</button>
       </div>
       <span>or</span>
       <div class="form-group">
-        <button class="btn-google" type="button" name="button" (click)="loginWithGoogle()">
+        <button class="btn-google" type="button" name="button" (click)="OnLoginWithGoogle()">
           <fa-icon [icon]="iconGoogle"></fa-icon>
           Login with Google!
         </button>

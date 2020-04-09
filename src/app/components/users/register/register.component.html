@@ -1,23 +1,20 @@
 <div id="register">
   <div class="wrapper register-wrapper">
     <h1>Register</h1>
-    <form class="register-form" action="index.html" method="post">
+    <form class="register-form" #formRegister="ngForm" (submit)="onRegisterUser()">
       <div class="form-group">
-        <input class="input-form" type="text" name="username" value="" required>
-        <label for="">Name</label>
+        <input class="input-form input-primary" name="email" [(ngModel)]="user.email" required>
+        <label class="label-primary">Email</label>
       </div>
       <div class="form-group">
-        <input class="input-form" type="text" name="username" value="" required>
-        <label for="">email</label>
+        <input class="input-form input-primary" name="password"[(ngModel)]="user.password" required>
+        <label class="label-primary">Password</label>
       </div>
       <div class="form-group">
-        <input class="input-form" type="password" name="username" value="" required>
-        <label for="">Password</label>
-      </div>
-      <div class="form-group">
-        <button type="submit" name="button">Register!</button>
+        <button type="submit">Register!</button>
       </div>
       <a [routerLink]="['/']">Do you have an account?</a>
+
     </form>
   </div>
 

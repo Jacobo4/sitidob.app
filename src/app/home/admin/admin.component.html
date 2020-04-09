@@ -1,0 +1,25 @@
+<div id="home-admin">
+  <div class="wrapper newAdmin-wrapper">
+    <h1>Add and admin please</h1>
+    <form class="login-form" #formLogin="ngForm" (submit)="addAdminRole()" >
+
+      <div class="form-group">
+        <input class="input-form input-primary" type="text" name="email" [(ngModel)]="email" required>
+        <label class="label-primary">Email</label>
+      </div>
+
+      <div class="form-group">
+        <input class="input-form input-primary" type="text" name="role" [(ngModel)]="role" required>
+        <label class="label-primary">Role</label>
+      </div>
+
+
+      <div class="form-group">
+        <button type="submit" name="button">Go!</button>
+      </div>
+
+
+    </form>
+  </div>
+
+</div>
